@@ -25,6 +25,7 @@ export class ProveedoresComponent {
       this.listaProveedores = data;
     });
   }
+  
   eliminar(idProveedor: number) {
     this.ServicioProveedor.eliminar(idProveedor).subscribe((data) => {
       this.cargatabla();

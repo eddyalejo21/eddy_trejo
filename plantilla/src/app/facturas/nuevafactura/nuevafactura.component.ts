@@ -47,8 +47,6 @@ export class NuevafacturaComponent implements OnInit {
     if (this.idFactura > 0) {
 
       this.facturaService.uno(this.idFactura).subscribe((factura) => {
-        console.log(factura);
-        console.log(factura.Fecha);
 
         let fecha = factura.Fecha;
         let [fechaParte] = fecha.split(" ");

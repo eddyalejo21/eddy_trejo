@@ -27,9 +27,6 @@ export class NuevoproveedorComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.idProveedores = parseInt(this.ruta.snapshot.paramMap.get('id'));
-    /*this.ruta.paramMap.subscribe((parametros) => {
-      this.idProveedores = parseInt(parametros.get('id'));
-    });*/
 
     if (this.idProveedores > 0) {
       this.provedorServicio.uno(this.idProveedores).subscribe((proveedor) => {

@@ -67,6 +67,32 @@ const routes: Routes = [
       {
         path: 'facturas',
         loadComponent: () => import('./facturas/facturas.component').then((m) => m.FacturasComponent)
+      },
+      {
+        path: 'unidadmedida',
+        loadComponent: () => import('./unidadmedida/unidadmedida.component').then((m) => m.UnidadmedidaComponent),
+      },
+      {
+        path: 'nuevaunidadmedida',
+        loadComponent: () =>
+          import('./unidadmedida/nuevaunidadmedida/nuevaunidadmedida.component').then((m) => m.NuevaunidadmedidaComponent),
+      },
+      {
+        path: 'editarunidadmedida/:id',
+        loadComponent: () =>
+          import('./unidadmedida/nuevaunidadmedida/nuevaunidadmedida.component').then((m) => m.NuevaunidadmedidaComponent),
+      },
+      {
+        path: 'productos',
+        loadComponent: () => import('./productos/productos.component').then((m) => m.ProductosComponent),
+      },
+      {
+        path: 'nuevoproducto',
+        loadComponent: () => import('./productos/nuevoproducto/nuevoproducto.component').then((m) => m.NuevoproductoComponent),
+      },
+      {
+        path: 'editarproducto/:id',
+        loadComponent: () => import('./productos/nuevoproducto/nuevoproducto.component').then((m) => m.NuevoproductoComponent),
       }
     ]
   },
